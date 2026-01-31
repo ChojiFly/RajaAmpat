@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="close-btn" onclick="location.href='index.html'">×</div>
+
+<div class="header">
+  <h1>Admin Panel</h1>
+  <p id="counter">Memuat data...</p>
+</div>
+
+<div class="container">
+  <div class="card">
+
+    <input
+      type="text"
+      id="search"
+      placeholder="Cari nama / NIS..."
+      style="margin-bottom:16px"
+    >
+
+    <div id="empty" style="display:none;text-align:center;color:#64748b">
+      Belum ada yang mengisi biodata
+    </div>
+
+    <div id="list"></div>
+
+  </div>
+</div>
+
+<script type="module" src="admin.js"></script>
+</body>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selamat Datang</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="header">
+  <h1>Sistem Biodata</h1>
+  <p>Silakan pilih akses</p>
+</div>
+
+<div class="container">
+  <div class="card">
+    <button class="btn-primary" onclick="masukUser()">
+      Isi Biodata
+    </button>
+
+    <button class="btn-secondary" onclick="masukAdmin()">
+      Admin
+    </button>
+  </div>
+</div>
+
+<script>
+function masukUser() {
+  location.href = "biodata.html";
+}
+
+function masukAdmin() {
+  const pw = prompt("Password Admin");
+  if (pw === "admin123") {
+    sessionStorage.setItem("admin", "true");
+    location.href = "admin.html";
+  } else {
+    alert("Password salah");
+  }
+}
+</script>
+
+</body>
+</html>

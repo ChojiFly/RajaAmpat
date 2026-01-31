@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "gform",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

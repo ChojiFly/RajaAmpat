@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Isi Biodata</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="close-btn" onclick="location.href='index.html'">×</div>
+
+<script>
+const saved = localStorage.getItem("biodata_id");
+if (saved) location.href = `qr.html?id=${saved}`;
+</script>
+
+  <div class="header">
+    <h1>Form Biodata</h1>
+    <p>Silakan isi data dengan benar</p>
+  </div>
+
+  <!-- CONTAINER WAJIB -->
+  <div class="container">
+
+    <div class="card">
+      <form id="biodataForm" class="form-grid">
+
+        <div class="form-group">
+          <label>Nama</label>
+          <input name="nama" required>
+        </div>
+
+        <div class="form-group">
+          <label>NIS</label>
+          <input name="nis" required>
+        </div>
+
+        <div class="form-group">
+          <label>Jenis Kelamin</label>
+          <select name="jk">
+            <option>Laki-laki</option>
+            <option>Perempuan</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Kelas</label>
+          <input name="kelas">
+        </div>
+
+        <div class="form-group">
+          <label>Tempat Lahir</label>
+          <input name="tempat">
+        </div>
+
+        <div class="form-group">
+          <label>Tanggal Lahir</label>
+          <input type="date" name="tgl">
+        </div>
+
+        <div class="form-group full">
+          <label>Alamat</label>
+          <textarea name="alamat"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label>No HP</label>
+          <input name="hp">
+        </div>
+
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" name="email">
+        </div>
+
+        <div class="form-group full">
+          <label>Catatan</label>
+          <textarea name="catatan"></textarea>
+        </div>
+
+        <div class="form-group full">
+          <button type="submit" class="btn-primary">
+            Simpan & Dapatkan QR
+          </button>
+        </div>
+
+      </form>
+    </div>
+
+  </div>
+
+  <div class="footer-decor">
+    <div class="wave"></div>
+  </div>
+
+  <script type="module" src="form.js"></script>
+</body>
+</html>
